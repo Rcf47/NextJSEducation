@@ -2,6 +2,7 @@ import React from "react"
 import { filmDetails } from "./data"
 import { FilmDetails } from "@/components/FilmDetails/FilmDetails"
 import { Reviews } from "@/components/Reviews/Reviews"
+import { NewReviewForm } from "@/components/NewReviewForm/NewReviewForm"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         seasonsCount={filmDetails.seasonsCount}
       />
       <Reviews reviews={filmDetails.reviews} />
+      <NewReviewForm />
       <footer />
     </div>
   )
