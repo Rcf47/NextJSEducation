@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react"
+import { Review } from "../Review/Review"
 
 interface Props {
   reviews: {
@@ -11,14 +12,15 @@ interface Props {
 export const Reviews: FunctionComponent<Props> = ({ reviews }) => {
   return (
     <div>
-      {Boolean(reviews.length) && reviews.map((review) => (
-        <div>
-          <span>{review.author}</span>
-          <span>{review.text}</span>
-          <span>{review.rating}</span>
-        </div>
-
-      ))}
+      {Boolean(reviews.length) &&
+        reviews.map((review) => (
+          <Review
+            key={review.id}
+            author={review.author}
+            text={review.text}
+            rating={review.rating}
+          />
+        ))}
     </div>
   )
 }
