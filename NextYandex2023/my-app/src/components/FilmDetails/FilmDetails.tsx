@@ -1,8 +1,9 @@
 "use client"
 import { useCount } from "@/hooks/useCount";
-import { FunctionComponent, useEffect, useMemo, useState } from "react";
+import { FunctionComponent, useContext, useEffect, useMemo, useState } from "react";
 import { FilmInfo } from "../FilmInfo/FilmInfo";
 import { filmDetails } from "@/app/data";
+import { ThemeContext } from "@/app/page";
 
 interface Props {
   title: string;
@@ -16,7 +17,9 @@ export const FilmDetails: FunctionComponent<Props> = ({
   seasonsCount
 }) => {
   let { count, increment, decrement } = useCount(0)
+  let theme = useContext(ThemeContext)
   useEffect(() => {
+    console.log(theme)
     console.log(`count is ${count}`)
   }, [count])
   let filmRating: number = useMemo(() => {

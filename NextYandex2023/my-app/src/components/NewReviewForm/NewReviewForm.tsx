@@ -1,7 +1,8 @@
 "use client"
-import { FunctionComponent, useReducer } from "react"
+import { FunctionComponent, useCallback, useReducer } from "react"
 
 export const NewReviewForm: FunctionComponent = () => {
+  const setFocus = useCallback((element) => { element.focus }, [])
   const FORM_ACTIONS = {
     setName: "setName",
     setText: "setText",
@@ -41,7 +42,7 @@ export const NewReviewForm: FunctionComponent = () => {
     <div>
       <label>
         Name:
-        <input value={state.name} onChange={onNameChange} type="text" />
+        <input ref={setFocus} value={state.name} onChange={onNameChange} type="text" />
       </label>
       <label>
         Text:

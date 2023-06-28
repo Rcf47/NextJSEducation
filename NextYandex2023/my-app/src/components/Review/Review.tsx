@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import styles from '../../app/styles.module.css'
 
 interface Props {
 
@@ -10,8 +11,8 @@ interface Props {
 export const Review: FunctionComponent<Props> = ({ text, author, rating }) => {
   return (
     <div >
-      <span>{author}</span><br />
-      <span>{text}</span><br />
+      <span className={styles.author}>{author}</span><br />
+      <span className={styles.text}>{text}</span><br />
       <span>{rating}</span><br />
     </div>
 
