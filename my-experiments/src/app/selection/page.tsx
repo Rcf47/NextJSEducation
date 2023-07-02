@@ -11,6 +11,8 @@ export default function Selection() {
       <Link href='/'>Back</Link>
       <br />
       <button type='button' onClick={() => router.push('/')}>Back with router</button>
+      <Link href='/film/123'>Film</Link>
+      {[1, 2, 3].map((id, index) => { <Link href={`film/${id}`} key={index}>{`Film ${id}`}</Link> })}
     </>
   )
 }
