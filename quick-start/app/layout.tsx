@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={firaCode.className}>
         <Header />
-        <main className="container">{children}</main>
+        <main className="flex justify-center">{children}</main>
         <Footer />
       </body>
     </html>

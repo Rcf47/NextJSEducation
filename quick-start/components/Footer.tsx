@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="flex justify-center">
       Created by &copy;Vadim Cherepanov
     </footer>
   )
