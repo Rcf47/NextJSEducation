@@ -7,7 +7,7 @@ export default function AboutLayout({
 }) {
   return (
     <div>
-      <h1>About us</h1>
+      <h1 className="mb-4 text-4xl">About us</h1>
       <ul className="flex justify-center space-x-4">
         <li>
           <Link href="/about/contacts">Contacts</Link>
